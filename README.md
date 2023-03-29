@@ -12,7 +12,7 @@ My chosen workflow is project label application, specifically single existing la
 
 ### Getting Started
 
-Run `git clone https://github.com/anabelocurry/companyCamAssignment.git && cd CompanyCam Automation Assignment && npm install`
+Run `git clone https://github.com/anabelocurry/companyCamAssignment.git && cd companycam-automation -assignment && npm install`
 This will clone the repository, download codeceptjs, navigate your terminal to the new repository folder and install node package manager locally
 
 ### Running Tests Locally
