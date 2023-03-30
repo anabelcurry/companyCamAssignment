@@ -40,17 +40,13 @@ export = {
      * Removes active label to start with a clean slate
      */
      removeActiveLabels: async function () {
+        await this.openLabelPopup();
         await I.wait(1);
-        const isLabelActive =
-          (await I.grabNumberOfVisibleElements(selectors.activeLabel)) > 0;
-        if (isLabelActive) {
-            await this.verifyAndClick(selectors.btnEditLabels)
+        while ((await I.grabNumberOfVisibleElements(selectors.btnSelectedLabel)) > 0) {
             await this.verifyAndClick(selectors.btnSelectedLabel)
-            await this.verifyAndClick(selectors.btnSaveLabel)
-            await I.dontSeeElement(selectors.activeLabel)
-        } else {
-            return
-        }
+        };
+        await this.verifyAndClick(selectors.btnSaveLabel);
+        await I.dontSeeElement(selectors.activeLabel);
     },
     /**
      * This needs some more thought. I need to decide what I want this function
