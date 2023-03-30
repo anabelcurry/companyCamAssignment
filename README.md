@@ -15,6 +15,12 @@ My chosen workflow is project label application, specifically single existing la
 Run `git clone https://github.com/anabelocurry/companyCamAssignment.git && cd companyCamAssignment && npm install`
 This will clone the repository, download codeceptjs, navigate your terminal to the new repository folder and install node package manager locally
 
+### Running Tests Locally
+
+The default helper for this repo is playwright.
+
+Use codecept.conf.js to run tests with Playwright:
+
 #### Examples
 
 Run _everything_:
