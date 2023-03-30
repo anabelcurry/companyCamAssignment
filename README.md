@@ -24,17 +24,13 @@ Use codecept.conf.js to run tests with Playwright:
 
 #### Examples
 
+Run _this test_:
+
+`npx codeceptjs run tests/project-labels.spec.ts`
+
 Run _everything_:
 
 `npx codeceptjs run`
-
-Run everthing with debug logging:
-
-`npx codeceptjs run --debug`
-
-Run everything with verbose logging:
-
-`npx codeceptjs run --verbose`
 
 ### Credits
 
