@@ -8,8 +8,10 @@ Scenario('test single project label application', async ({ I }) => {
     await I.waitUrlEquals('/projects');
 
     await steps.verifyAndClick(selectors.btnOpenProject('Automation Assignment'));
+    await I.seeElement(selectors.projectTitle);
+    await steps.removeActiveLabels();
 
-    // Open label pop up, apply single existing label and close without saving
+    // Open label pop up, apply label and close without saving
     // Verify label was NOT applied
     await steps.openLabelPopup();
     await steps.verifyAndClick(selectors.btnLabelByIndex(1));
@@ -17,7 +19,7 @@ Scenario('test single project label application', async ({ I }) => {
 
     await I.dontSeeElement(selectors.activeLabel);
     
-    //Open label pop up, apply single existing label and save
+    //Open label pop up, apply label and save
     //Verify that label was applied
     await steps.openLabelPopup();
     await steps.verifyAndClick(selectors.btnLabelByIndex(1));
