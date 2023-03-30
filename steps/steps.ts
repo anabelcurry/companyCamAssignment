@@ -37,9 +37,7 @@ export = {
         }
     },
     /**
-     * Currently non-functioning. Can't quite figure out why 
-     * projectHasActivelabel is returning false evern when the activeLabel
-     * element is visible on the page.
+     * Removes active label to start with a clean slate
      */
      removeActiveLabels: async function () {
         await I.wait(1);
